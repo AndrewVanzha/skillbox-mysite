@@ -192,7 +192,7 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  /*outline: 1px solid salmon;*/
+  outline: 1px solid salmon;
 }
 
 .left-header-block ul {
@@ -277,7 +277,7 @@ body {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  /*outline: 1px solid sienna;*/
+  outline: 1px solid sienna;
 }
 
 .personal-item .column-left {
@@ -299,7 +299,7 @@ h1 {
 
 .explic-line {
   margin: 0;
-  margin-top: 17px;
+  margin-top: 22px;
   padding: 0;
   font-size: 25px;
   color: rgb(137, 147, 173);
@@ -315,31 +315,31 @@ h1 {
   margin: 0;
   padding: 0;
   width: 445px;
-  /*height: 700px;*/
   position: relative;
-  /*outline: 1px dashed darkgreen;*/
+  outline: 1px dashed darkgreen;
 }
 
 .author-pic {
   background:
     url("img/man-shadow.png") no-repeat -17px -24px / 685px,
-    url("img/crumpled-ellipse.png") no-repeat 4px 60px / 822px;
+    url("img/crumpled-ellipse.png") no-repeat -1px 112px / 822px;
 }
 
 .author-pic-position {
-  /*outline: 1px dashed darkred;*/
+  outline: 1px dashed darkred;
   position: absolute;
   width: 823px;
-  height: 725px;
 }
 
 .author-pic div {
   margin: 0;
-  padding: 53px 0 0 74px;
+  padding: 0;
+  padding-left: 67px;
+  padding-top: 38px;
 }
 
 .deal-item {
-  /*outline: 1px solid darkmagenta;*/
+  outline: 1px solid darkmagenta;
   margin: 0;
   padding: 0;
 }
@@ -354,7 +354,7 @@ h2 {
 }
 
 .doings-anno {
-  padding-top: 53px;
+  padding-top: 93px;
 }
 
 .doings-block {
@@ -379,7 +379,7 @@ h2 {
   text-decoration: none;
   background-repeat: no-repeat;
   background-position: top;
-  /*outline: 1px solid sandybrown;*/
+  outline: 1px solid sandybrown;
 }
 
 .doings-block a:nth-of-type(1) {
@@ -417,7 +417,7 @@ h2 {
 .examples-item {
   margin: 0;
   padding: 0;
-  /*outline: 1px solid lawngreen;*/
+  outline: 1px solid lawngreen;
 }
 
 .examples-item h2 {
@@ -472,7 +472,7 @@ h2 {
   background-repeat: no-repeat;
   background-position: top;
   background-size: auto 290px;
-  /*outline: 1px solid sandybrown;*/
+  outline: 1px solid sandybrown;
 }
 
 .examples-slider a:nth-of-type(1) {
@@ -490,7 +490,7 @@ h2 {
 .examples-slider a h3 {
   margin: 0;
   padding: 0;
-  padding-top: 325px;
+  padding-top: 320px;
   font-size: 20px;
   color: rgb(137, 147, 173);
   text-align: center;
@@ -509,14 +509,13 @@ h2 {
   padding: 0;
   padding-bottom: 87px;
   background-image: linear-gradient(to bottom left, rgb(255, 47, 150), rgb(255, 143, 90));
-  /*outline: 1px solid darkgreen;*/
+  outline: 1px solid darkgreen;
 }
 
 .price-bar {
   margin: 0 auto;
   padding: 0;
-  padding-top: 79px;
-  width: 950px;
+  padding-top: 87px;
 }
 
 .price-bar h2 {
@@ -529,7 +528,7 @@ h2 {
 
 .price-bar p {
   margin: 0;
-  margin-top: 40px;
+  margin-top: 34px;
   padding: 0;
   font-size: 20px;
   color: rgb(255, 255, 255);
@@ -543,7 +542,7 @@ h2 {
   height: 110px;
   display: flex;
   justify-content: space-between;
-  /*outline: 1px solid rebeccapurple;*/
+  outline: 1px solid rebeccapurple;
 }
 
 .left-footer-block {
@@ -580,7 +579,7 @@ h2 {
 
 .central-footer-block a {
   display: block;
-  margin: 8px 0 8px 1px;
+  margin: 5px 0 5px 1px;
   padding: 0;
   list-style: none;
   text-decoration: none;
@@ -657,6 +656,6 @@ h2 {
 
 .copyright-bar p {
   margin: 0;
-  padding: 34px 0;
+  padding: 14px 0;
   color: rgb(255, 255, 255);
 }
