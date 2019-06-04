@@ -168,8 +168,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  max-width: 1920px;
-  /*min-width: 1220px;*/
+  /*max-width: 1920px;*/
   font-family: Roboto, "Myriad Pro", Arial;
   font-size: 16px;
   /*overflow: hidden;*/
@@ -183,9 +182,9 @@ body {
 }
 
 /* верхняя полоса */
-.header-line {
-  /*margin: 0 auto;*/
-}
+/*.header-line {
+  margin: 0 auto;
+}*/
 
 .header-line-block {
   display: flex;
@@ -239,6 +238,7 @@ body {
   height: 30px;
   width: 205px;
   padding: 0;
+  cursor: pointer;
   outline: none;
   border: 1px solid rgb(248, 35, 112);
   background-color: transparent;
@@ -251,6 +251,7 @@ body {
   height: 60px;
   width: 270px;
   padding: 0;
+  cursor: pointer;
   outline: none;
   border: none;
   background-color: rgb(255, 78, 46);
@@ -262,7 +263,7 @@ body {
 .header-phone-button {
   display: inline-block;
   padding: 0;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 /* центральный раздел */
@@ -582,6 +583,9 @@ h2 {
   display: block;
   margin: 8px 0 8px 1px;
   padding: 0;
+  font-family: Roboto, "Myriad Pro", Arial;
+  font-size: 25px;
+  font-weight: bold;
   list-style: none;
   text-decoration: none;
   font-size: 25px;
@@ -591,11 +595,15 @@ h2 {
 .fa-phone::before {
   padding-right: 18px;
   color: rgb(250, 23, 151);
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
 }
 
 .fa-envelope::before {
   padding-right: 18px;
   color: rgb(250, 8, 145);
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
 }
 
 .right-footer-block {
