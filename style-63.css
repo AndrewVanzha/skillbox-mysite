@@ -176,7 +176,6 @@ body {
 
 .fixed-container {
   width: 1170px;
-  /*width: 1000px;*/
   margin: 0 auto;
   /*overflow: hidden;*/
 }
@@ -191,7 +190,7 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  /*outline: 1px solid salmon;*/
+  outline: 1px solid salmon;
 }
 
 .left-header-block ul {
@@ -366,12 +365,13 @@ h2 {
 
 .doings-block-position {
   margin: 0;
-  margin-top: 92px;
+  /*margin-top: 92px;*/
   padding: 0;
 }
 
 .doings-block a {
   display: block;
+  margin-top: 92px;
   padding: 0;
   font-size: 20px;
   height: 140px;
@@ -380,7 +380,7 @@ h2 {
   text-decoration: none;
   background-repeat: no-repeat;
   background-position: top;
-  /*outline: 1px solid sandybrown;*/
+  outline: 1px solid sandybrown;
 }
 
 .doings-block a:nth-of-type(1) {
@@ -674,3 +674,59 @@ h2 {
   padding: 34px 0;
   color: rgb(255, 255, 255);
 }
+
+
+@media (max-width: 1250px) and (min-width: 981px) {
+  .fixed-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: auto;
+  }
+  .left-header-block {
+    padding: 16px 0;
+    width: 45px;
+    height: 32px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("img/burger-colored.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    /*border: 1px solid salmon;*/
+    }
+  
+  .left-header-block ul {
+    display: none;
+  }
+
+  .doings-block {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .doings-block a {
+    width: 450px;
+  }
+  
+  .doings-block a:nth-of-type(1) {
+    padding: 0 96px;
+    /*width: 257px;*/
+  }
+  
+  .doings-block a:nth-of-type(2) {
+    padding: 0 90px;
+    /*width: 269px;*/
+  }
+  
+  .doings-block a:nth-of-type(3) {
+    /*width: 202px;*/
+    padding: 0 124px;
+  }
+  
+  .doings-block a:nth-of-type(4) {
+    /*width: 247px;*/
+    padding: 0 88px;
+  }
+    
+  }
