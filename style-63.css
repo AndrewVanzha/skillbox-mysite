@@ -472,7 +472,7 @@ h2 {
 }
 
 .examples-slider {
-  margin-top: 97px;
+  margin: 97px auto 0 auto;
   height: 350px;
   display: flex;
   flex-wrap: nowrap;
@@ -509,6 +509,22 @@ h2 {
   font-size: 20px;
   color: rgb(137, 147, 173);
   text-align: center;
+}
+
+.slider-marker-bar {
+  margin: 15px auto 0 auto;
+  padding: 0;
+  height: 20px;
+  width: 248px;
+  outline: 1px solid slateblue;
+}
+
+.slider-marker-bar div {
+  display: inline-block;
+  margin: 0 30px;
+  padding: 0;
+  height: 20px;
+  width: 20px;
 }
 
 .project-button-position {
@@ -737,4 +753,11 @@ h2 {
     padding: 0 88px;
   }
 
+  .choice-circle {
+    display: none;
+  }
+
+  .examples-slider {
+    width: 760px;
+  }
 }
