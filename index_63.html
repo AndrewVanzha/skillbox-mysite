@@ -5,9 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Сайт диплом</title>
+  <script src="jquery-3.4.0.min.js"></script>
+  <link rel="stylesheet" href="swiper.min.css">
   <link rel="stylesheet" type="text/css" href="style-63.css">
   <script src="https://kit.fontawesome.com/881066c6bc.js"></script><!-- Place your kit's code here -->
-  <script src="jquery-3.4.0.min.js"></script>
   <script src="popup-6.js"></script>
 </head>
 
@@ -69,7 +70,7 @@
           <button class="press-button pricing-button-position">Узнать стоимость</button>
         </article>
 
-        <article class="examples-item">
+        <!--<article class="examples-item">
           <h2>Примеры моих работ</h2>
           <div class="examples-block">
             <div class="choice-circle left-choice-circle"></div>
@@ -86,11 +87,50 @@
             </div>
             <div class="choice-circle right-choice-circle"></div>
           </div>
-          <!--<div class="slider-marker-bar">
-            <div class="slider-marker marker1"></div>
-            <div class="slider-marker marker2"></div>
-            <div class="slider-marker marker3"></div>
-          </div>-->
+        </article>-->
+      </div>
+
+      <div class="fixed-container-wide">
+        <article class="examples-item">
+          <h2>Примеры моих работ</h2>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="unit-box">
+                  <img src="img/pic-1.png" width="365" height="300" alt="мой сайт №1">
+                  <h3 class="site-title">Сайт психолога Веры Антоновой</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="unit-box">
+                  <img src="img/pic-2.png" width="365" height="300" alt="мой сайт №2">
+                  <h3 class="site-title">Сайт магазина детской одежды</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="unit-box">
+                  <img src="img/pic-3.png" width="365" height="300" alt="мой сайт №3">
+                  <h3 class="site-title">Сайт магазина "Рыболов"</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="unit-box">
+                  <img src="img/pic-4.png" width="365" height="300" alt="мой сайт №4">
+                  <h3 class="site-title">Сайт #4</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="unit-box">
+                  <img src="img/pic-5.png" width="365" height="300" alt="мой сайт №5">
+                  <h3 class="site-title">Сайт #5</h3>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+
           <button class="press-button project-button-position">Заказать проект</button>
         </article>
       </div>
@@ -140,6 +180,19 @@
       <p>&#169; Дмитрий Алексеев, 2016-2018</p>
     </div>
   </footer>
+
+  <script src="swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      slidesPerView: numPic,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      freeMode: true,
+      spaceBetween: 30
+    });
+  </script>
 </body>
 
 </html>

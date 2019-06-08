@@ -1,61 +1,36 @@
 var windowWidth;
+var numPic = 3;
+windowWidth = $(window).width();
+if (windowWidth<1250 && windowWidth>320) {
+  numPic = 2;
+}
+
+$(document).ready(function () {
+  windowWidth = $(window).width();
+  //console.log(windowWidth);
+  if (windowWidth > 1250) {
+    if (!($('div.swiper-pagination').is('.hide-element'))) {
+      $('div.swiper-pagination').addClass('hide-element');
+    }
+    $('.swiper-button-next').removeClass('hide-element');
+    $('.swiper-button-prev').removeClass('hide-element');
+  } else { // windowWidth <= 1250
+    $('div.swiper-pagination').removeClass('hide-element');
+    if (!($('div.swiper-button-next').is('.hide-element'))) {
+      $('.swiper-button-next').addClass('hide-element');
+    }
+    if (!($('div.swiper-button-prev').is('.hide-element'))) {
+      $('.swiper-button-prev').addClass('hide-element');
+    }
+  }
+});
+
 $(window).resize(function () {
   windowWidth = $(window).width();
   //console.log(windowWidth);
   if (windowWidth >= 1250 && ($('div').is('.popup-box'))) {
     $('div.popup-box').remove(); // убираю popup-меню на большом экране
   }
-  if (windowWidth < 1250 && (!$('div').is('.slider-marker-bar'))) {
-    console.log(windowWidth);
-    $('.examples-block').append( // рисую полосу маркеров слайдов
-      '<div class="slider-marker-bar">' +
-      '<div class="slider-marker marker1"></div>' +
-      '<div class="slider-marker marker2"></div>' +
-      '<div class="slider-marker marker3"></div>' +
-      '</div>');
-    $('.marker1').css({ // генерирую стили для маркеров слайдов
-      'border': '1px solid rgb(255, 78, 46)',
-      'border-radius': '50%',
-      'background-color': 'rgb(255, 78, 46)'
-    });
-    $('.marker2').css({ // генерирую стили для маркеров слайдов
-      'border': '1px solid rgb(137, 147, 173)',
-      'border-radius': '50%',
-      'background-color': 'rgb(137, 147, 173)'
-    });
-    $('.marker3').css({ // генерирую стили для маркеров слайдов
-      'border': '1px solid rgb(137, 147, 173)',
-      'border-radius': '50%',
-      'background-color': 'rgb(137, 147, 173)'
-    });
-  }
-  if (windowWidth >= 1250 && ($('div').is('.slider-marker-bar'))) {
-    $('div.slider-marker-bar').remove(); // убираю полосу маркеров слайдов
-  }
-});
-
-$(function () {
-  $('.slider-marker-bar').click(function () {
-    console.log('marker 1');
-/*    $('.marker1').css({ // генерирую стили для маркеров слайдов
-      'border': '1px solid rgb(255, 78, 46)',
-      'border-radius': '50%',
-      'background-color': 'rgb(255, 78, 46)'
-    });
-    $('.marker2').css({ // генерирую стили для маркеров слайдов
-      'border': '1px solid rgb(137, 147, 173)',
-      'border-radius': '50%',
-      'background-color': 'rgb(137, 147, 173)'
-    });
-    $('.marker3').css({ // генерирую стили для маркеров слайдов
-      'border': '1px solid rgb(137, 147, 173)',
-      'border-radius': '50%',
-      'background-color': 'rgb(137, 147, 173)'
-    });
-    $('.examples-slider a:nth-of-type(1)').css({'background-image': 'url("img/сайт-1.png")'});
-    $('.examples-slider a:nth-of-type(2)').css({'background-image': 'url("img/сайт-2.png")'});
-    $('.examples-slider a:nth-of-type(3)').css({'display': 'none'});*/
-  });
 });
 
 $(function () {
