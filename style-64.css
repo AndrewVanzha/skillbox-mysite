@@ -1,8 +1,6 @@
 /*https://google-webfonts-helper.herokuapp.com/fonts*/
 
-
 /* roboto-300 - cyrillic-ext_latin_cyrillic */
-
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -21,9 +19,7 @@
     /* Legacy iOS */
 }
 
-
 /* roboto-regular - cyrillic-ext_latin_cyrillic */
-
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -44,7 +40,6 @@
 
 
 /* roboto-italic - cyrillic-ext_latin_cyrillic */
-
 @font-face {
     font-family: 'Roboto';
     font-style: italic;
@@ -65,7 +60,6 @@
 
 
 /* roboto-500italic - cyrillic-ext_latin_cyrillic */
-
 @font-face {
     font-family: 'Roboto';
     font-style: italic;
@@ -86,7 +80,6 @@
 
 
 /* roboto-500 - cyrillic-ext_latin_cyrillic */
-
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -107,7 +100,6 @@
 
 
 /* roboto-700 - cyrillic-ext_latin_cyrillic */
-
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -128,7 +120,6 @@
 
 
 /* roboto-900 - cyrillic-ext_latin_cyrillic */
-
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -149,7 +140,6 @@
 
 
 /* roboto-700italic - cyrillic-ext_latin_cyrillic */
-
 @font-face {
     font-family: 'Roboto';
     font-style: italic;
@@ -532,9 +522,9 @@ h2 {
 }
 
 .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: rgb(245, 63, 79);
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 78, 46);
 }
 
 .hide-element {
@@ -551,8 +541,7 @@ h2 {
 .price-item {
     margin: 0;
     margin-top: 102px;
-    padding: 0;
-    padding-bottom: 87px;
+    padding: 0 110px 87px 110px;
     background-image: linear-gradient(to bottom left, rgb(255, 47, 150), rgb(255, 143, 90));
     /*outline: 1px solid darkgreen;*/
 }
@@ -561,7 +550,7 @@ h2 {
     margin: 0 auto;
     padding: 0;
     padding-top: 79px;
-    width: 950px;
+    width: 944px;
 }
 
 .price-bar h2 {
@@ -576,7 +565,7 @@ h2 {
     margin: 0;
     margin-top: 40px;
     padding: 0;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(255, 255, 255);
     text-align: left;
 }
@@ -793,9 +782,19 @@ h2 {
         /*width: 247px;*/
         padding: 0 88px;
     }
+
+    .price-bar {
+        width: auto;
+    }
+
+    .price-bar h2,
+    .price-bar p {
+        white-space: normal;
+    }
 }
 
 @media (max-width: 1250px) and (min-width: 981px) {
+
     .fixed-container,
     .fixed-container-wide {
         margin-left: 40px;
@@ -806,20 +805,22 @@ h2 {
     h1 {
         font-size: 54px;
     }
-}
 
-@media (max-width: 1250px) and (min-width: 981px) {
     .doings-block {
         justify-content: space-around;
         align-items: center;
         /*flex-wrap: wrap;*/
     }
-}
 
-@media (max-width: 1250px) and (min-width: 981px) {
     .swiper-container {
         padding: 0 56px;
         outline: 1px solid darkorange;
+    }
+}
+
+@media (max-width: 1024px) {
+    .price-item {
+        padding: 0 40px 87px 40px;
     }
 }
 
@@ -833,5 +834,23 @@ h2 {
         justify-content: space-between;
         align-items: center;
         /*flex-wrap: wrap;*/
+    }
+
+    .price-bar h2 {
+        font-size: 38px;
+    }
+
+    .price-bar p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 780px) {
+    .price-bar h2 {
+        font-size: 28px;
+    }
+
+    .price-bar p {
+        font-size: 15px;
     }
 }
