@@ -261,7 +261,7 @@ body {
 }
 
 .book-call {
-    height: 30px;
+    height: 45px;
     width: 205px;
     padding: 0;
     cursor: pointer;
@@ -611,12 +611,15 @@ h2 {
     margin: 8px 0 8px 1px;
     padding: 0;
     font-family: Roboto, "Myriad Pro", Arial;
-    font-size: 25px;
     font-weight: bold;
     list-style: none;
     text-decoration: none;
-    font-size: 25px;
     color: rgb(0, 0, 0);
+}
+
+.phone-line,
+.mail-line {
+    font-size: 25px;
 }
 
 .fa-phone::before {
@@ -741,6 +744,18 @@ h2 {
         order: 0;
     }
 
+    .fixed-container {
+        padding-left: 40px;
+        padding-right: 40px;
+        width: auto;
+    }
+
+    .fixed-container-wide {
+        margin-left: 40px;
+        margin-right: 40px;
+        width: auto;
+    }
+
     h1 {
         margin-top: 23px;
         padding-top: 0;
@@ -791,17 +806,13 @@ h2 {
     .price-bar p {
         white-space: normal;
     }
+
+    .footer-stripe {
+        padding: 0 40px;
+    }
 }
 
 @media (max-width: 1250px) and (min-width: 981px) {
-
-    .fixed-container,
-    .fixed-container-wide {
-        margin-left: 40px;
-        margin-right: 40px;
-        /*width: 1170px;*/
-    }
-
     h1 {
         font-size: 54px;
     }
@@ -843,14 +854,66 @@ h2 {
     .price-bar p {
         font-size: 16px;
     }
+
+    .central-footer-block a {
+        color: rgb(168, 176, 195);
+    }
+
+    .phone-line {
+        font-size: 20px;
+    }
+
+    .mail-line {
+        font-size: 18px;
+    }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 790px) {
     .price-bar h2 {
         font-size: 28px;
     }
 
     .price-bar p {
         font-size: 15px;
+    }
+
+    .footer-stripe {
+        height: auto;
+        width: 320px;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .left-footer-block {
+        order: 1;
+    }
+
+    .central-footer-block {
+        order: 2;
+        margin: 47px 0 24px 0;
+        height: 67px;
+    }
+
+    .right-footer-block {
+        order: 3;
+        height: 134px;
+    }
+
+    .book-call {
+        height: 56px;
+        background-color: rgb(248, 35, 112);
+        color: rgb(255, 255, 255);
+    }
+}
+
+@media (max-width: 590px) {
+    .fixed-container {
+        padding: 0;
+    }
+
+    .fixed-container-wide {
+        margin: 0;
     }
 }
