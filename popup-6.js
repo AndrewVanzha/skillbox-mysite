@@ -28,6 +28,39 @@ function setLeftEdgePopupMenu() {
 
 }
 
+
+function manageHeaderPhoneLine() {
+    if (windowWidth <= 790) {
+        $('.header-phone-line').css({
+            'display': 'inline-block'
+        });
+        //console.log(varOffset.left);
+    } else {
+        $('.header-phone-line').css({
+            'display': 'none',
+        });
+        //console.log(windowWidth);
+    }
+
+}
+
+function managePersonalImg() {  //  в резерве
+    if (windowWidth <= 1250) {
+        $('.author-pic img').css({
+            'width': '320px'
+            /*'height': '335px'*/
+        });
+        //console.log(varOffset.left);
+    } else {
+        $('.author-pic img').css({
+            'width': '472px',
+            'height': '672px'
+        });
+        //console.log(windowWidth);
+    }
+
+}
+
 function setLeftPaddingForNameLine() {
     if (windowWidth > 1250) {
         var paddingLeft = (windowWidth - 1170) / 2;
@@ -73,6 +106,7 @@ $(document).ready(function () {
     setLeftPaddingForNameLine();
     manageSwiperPaginationAndButtons();
     setLeftEdgePopupMenu();
+    manageHeaderPhoneLine();
 });
 
 $(window).resize(function () {
@@ -84,6 +118,7 @@ $(window).resize(function () {
     manageSwiperPaginationAndButtons();
     setLeftPaddingForNameLine();
     setLeftEdgePopupMenu();
+    manageHeaderPhoneLine();
 });
 
 $(function () {
