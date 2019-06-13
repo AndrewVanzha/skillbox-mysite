@@ -44,24 +44,16 @@ function manageHeaderPhoneLine() {
 
 }
 
-function managePersonalImg() {  //  в резерве
-    if (windowWidth <= 1250) {
-        $('.author-pic img').css({
-            'width': '320px'
-            /*'height': '335px'*/
-        });
-        //console.log(varOffset.left);
+function managePersonalImg() {  //  управление картинкой с автором
+    if (windowWidth <= 980) {
+        $('.author-pic div img').attr('src', 'img/man-320.png');
     } else {
-        $('.author-pic img').css({
-            'width': '472px',
-            'height': '672px'
-        });
-        //console.log(windowWidth);
+        $('.author-pic div img').attr('src', 'img/man.png');
     }
 
 }
 
-function setLeftPaddingForNameLine() {
+function setLeftPaddingForNameLine() { // управление левым блоком в заголовке
     if (windowWidth > 1250) {
         var paddingLeft = (windowWidth - 1170) / 2;
         $('.personal-item .column-left').css({
@@ -74,7 +66,7 @@ function setLeftPaddingForNameLine() {
     }
 }
 
-function manageSwiperPaginationAndButtons() {
+function manageSwiperPaginationAndButtons() { // управление окном pagination и кнопками в слайдере
     if (windowWidth > 1250) {
         if (!($('div.swiper-pagination').is('.hide-element'))) {
             $('div.swiper-pagination').addClass('hide-element'); // убираю pagination на большом экране
@@ -107,6 +99,7 @@ $(document).ready(function () {
     manageSwiperPaginationAndButtons();
     setLeftEdgePopupMenu();
     manageHeaderPhoneLine();
+    managePersonalImg();
 });
 
 $(window).resize(function () {
@@ -119,6 +112,7 @@ $(window).resize(function () {
     setLeftPaddingForNameLine();
     setLeftEdgePopupMenu();
     manageHeaderPhoneLine();
+    managePersonalImg();
 });
 
 $(function () {

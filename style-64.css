@@ -374,8 +374,8 @@ h1 {
 
 .author-pic-position {
     /*position: relative;*/
-    /*width: 823px;*/
-    /*height: 725px;*/
+    /*width: 823px;
+    height: 725px;*/
     outline: 1px dashed darkred;
 }
 
@@ -725,7 +725,6 @@ h2 {
     margin-top: 72px;
     padding: 0;
     background-color: rgb(49, 41, 60);
-    /*background-color: rgb(172, 199, 221);*/
     text-align: center;
     font-size: 16px;
 }
@@ -803,11 +802,6 @@ h2 {
         margin: 45px auto 0 auto;
     }
 
-    /*
-    .doings-block a {
-        width: 450px;
-    }
-*/
     .doings-block a:nth-of-type(1) {
         padding: 0 96px;
     }
@@ -845,7 +839,6 @@ h2 {
 
     .author-pic {
         background:
-            url(img/man-shadow.png) no-repeat 74px -24px / 685px,
             url(img/crumpled-ellipse.png) no-repeat 4px 61px / 822px;
     }
 
@@ -881,6 +874,15 @@ h2 {
         width: auto;
     }
 
+    .author-pic {
+        background:
+            url(img/crumpled-ellipse.png) no-repeat 4px 61px / 822px;
+    }
+
+    .author-pic div img {
+        width: 460px;
+    }
+
     h1 {
         font-size: 54px;
     }
@@ -914,6 +916,16 @@ h2 {
 }
 
 @media (max-width: 790px) {
+    .author-pic {
+        background:
+            /*url(img/crumpled-ellipse-1024.png) no-repeat 4px 61px / 547px;*/
+            url(img/crumpled-ellipse-1024.png) no-repeat 4px 61px / 547px;
+    }
+
+    .author-pic div img {
+        width: 424px;
+    }
+
     .header-phone-box {
         /*margin-right: 10px;*/
         font-size: 18px;
@@ -972,6 +984,16 @@ h2 {
 }
 
 @media (max-width: 590px) {
+    .author-pic {
+        background:
+            /*url(img/crumpled-ellipse-1024.png) no-repeat 4px 61px / 547px;*/
+            url(img/crumpled-ellipse-320.png) no-repeat 4px 61px / 347px;
+    }
+
+    .author-pic div img {
+        width: 224px;
+    }
+
     .fixed-container {
         padding: 0;
     }
@@ -980,24 +1002,9 @@ h2 {
         margin: 0;
     }
 
-    .doings-block a:nth-of-type(1) {
-        width: auto;
-        margin: 92px auto 0 auto;
-        padding: 0;
-    }
-
-    .doings-block a:nth-of-type(2) {
-        width: auto;
-        margin: 92px auto 0 auto;
-        padding: 0;
-    }
-
-    .doings-block a:nth-of-type(3) {
-        width: auto;
-        margin: 92px auto 0 auto;
-        padding: 0;
-    }
-
+    .doings-block a:nth-of-type(1),
+    .doings-block a:nth-of-type(2),
+    .doings-block a:nth-of-type(3),
     .doings-block a:nth-of-type(4) {
         width: auto;
         margin: 92px auto 0 auto;
