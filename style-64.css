@@ -304,17 +304,9 @@ body {
 .header-phone-line a {
     text-decoration: none;
     list-style: none;
-    margin-left: 2px;
+    margin-left: 4px;
 }
 
-/*
-.fa-phone::after {
-    padding-right: 18px;
-    color: rgb(250, 23, 151);
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-}
-*/
 
 /* центральный раздел */
 .central-container {
@@ -381,7 +373,7 @@ h1 {
 }
 
 .author-pic-position {
-    position: relative;
+    /*position: relative;*/
     /*width: 823px;*/
     /*height: 725px;*/
     outline: 1px dashed darkred;
@@ -641,11 +633,17 @@ h2 {
     display: block;
     margin: 8px 0 8px 1px;
     padding: 0;
-    font-family: Roboto, "Myriad Pro", Arial;
+    /*font-family: Roboto, "Myriad Pro", Arial;*/
     font-weight: bold;
     list-style: none;
     text-decoration: none;
     color: rgb(0, 0, 0);
+}
+
+.central-footer-block a p {
+    display: inline-block;
+    margin: 0;
+    font-family: Roboto, "Myriad Pro", Arial;
 }
 
 .phone-line,
@@ -656,14 +654,16 @@ h2 {
 .fa-phone::before {
     padding-right: 18px;
     color: rgb(250, 23, 151);
-    font-family: "Font Awesome 5 Pro";
+    /*font-family: "Font Awesome";*/
+    /*font-family: "Font Awesome 5 Pro";*/
     font-weight: 900;
 }
 
 .fa-envelope::before {
     padding-right: 18px;
     color: rgb(250, 8, 145);
-    font-family: "Font Awesome 5 Pro";
+    /*font-family: "Font Awesome";*/
+    /*font-family: "Font Awesome 5 Pro";*/
     font-weight: 900;
 }
 
@@ -725,6 +725,7 @@ h2 {
     margin-top: 72px;
     padding: 0;
     background-color: rgb(49, 41, 60);
+    /*background-color: rgb(172, 199, 221);*/
     text-align: center;
     font-size: 16px;
 }
@@ -774,11 +775,6 @@ h2 {
 
     .personal-item .column-right {
         order: 0;
-    }
-
-    .author-pic div {
-        margin: 0 auto;
-        /*padding-left: 80px;*/
     }
 
     .fixed-container {
@@ -845,6 +841,17 @@ h2 {
 @media (max-width: 1250px) and (min-width: 981px) {
     .personal-item .column-right {
         width: 823px;
+    }
+
+    .author-pic {
+        background:
+            url(img/man-shadow.png) no-repeat 74px -24px / 685px,
+            url(img/crumpled-ellipse.png) no-repeat 4px 61px / 822px;
+    }
+
+    .author-pic div {
+        margin: 0 auto;
+        padding-left: 190px;
     }
 
     h1 {
@@ -924,7 +931,8 @@ h2 {
         font-size: 16px;
     }
 
-    h2, .price-bar h2 {
+    h2,
+    .price-bar h2 {
         font-size: 28px;
     }
 
