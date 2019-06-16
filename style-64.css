@@ -182,7 +182,7 @@ body {
     width: 1230px;
     margin: 0 auto;
     overflow: hidden;
-    outline: 1px solid darkblue;
+    /*outline: 1px solid darkblue;*/
 }
 
 .clearfix::after {
@@ -194,7 +194,7 @@ body {
 
 /* верхняя полоса */
 .header-line {
-    outline: 1px solid darkblue;
+    /*outline: 1px solid darkblue;*/
 }
 
 .popup-box {
@@ -218,7 +218,7 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    outline: 1px solid salmon;
+    /*outline: 1px solid salmon;*/
 }
 
 .nav-list {
@@ -231,7 +231,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
-    padding: 16px 0;
+    padding: 18px 2px 16px 0;
 }
 
 .left-header-block ul li:not(:last-of-type) {
@@ -255,7 +255,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     padding: 0;
-    margin-right: 30px;
+    margin-right: 28px;
     font-size: 25px;
     font-weight: bold;
     color: rgb(31, 31, 36);
@@ -263,13 +263,14 @@ body {
 
 .book-call {
     height: 45px;
-    width: 205px;
-    padding: 0;
+    width: 208px;
     cursor: pointer;
     outline: none;
     border: 1px solid rgb(248, 35, 112);
     background-color: transparent;
     text-align: center;
+    font-size: 16px;
+    letter-spacing: 1.01px;
     color: rgb(245, 63, 79);
 }
 
@@ -322,7 +323,9 @@ body {
     padding: 0;
     /*width: 100%;*/
     width: auto;
-    outline: 1px solid sienna;
+    height: 688px;
+    overflow: hidden;
+    /*outline: 1px solid sienna;*/
 }
 
 .personal-item .column-left {
@@ -330,16 +333,16 @@ body {
     margin: 0;
     padding: 0;
     width: 580px;
-    outline: 2px dashed darkgoldenrod;
+    /*outline: 2px dashed darkgoldenrod;*/
 }
 
 h1 {
     margin: 0;
     padding: 0;
-    padding-top: 213px;
+    padding-top: 211px;
     font-size: 76px;
     font-weight: 900;
-    letter-spacing: 1.9px;
+    letter-spacing: 2.2px;
     overflow: visible;
     white-space: nowrap;
     color: rgb(31, 31, 36);
@@ -363,25 +366,25 @@ h1 {
     order: 1;
     margin: 0;
     padding: 0;
-    outline: 2px dashed darkslateblue;
+    /*outline: 2px dashed darkslateblue;*/
 }
 
 .author-pic {
     background:
         url("img/man-shadow.png") no-repeat -17px -24px / 685px,
-        url("img/crumpled-ellipse.png") no-repeat 4px 61px / 822px;
+        url("img/crumpled-ellipse.png") no-repeat 4px 61px / 802px;
 }
-
+/*
 .author-pic-position {
-    /*position: relative;*/
-    /*width: 823px;
-    height: 725px;*/
+    position: relative;
+    width: 823px;
+    height: 725px;
     outline: 1px dashed darkred;
 }
-
+*/
 .author-pic div {
     margin: 0;
-    padding: 53px 20px 0 84px;
+    padding: 53px 10px 0 95px;
     /*width: 472px;
     height: 672px;*/
 }
@@ -393,7 +396,7 @@ h1 {
 .deal-item {
     margin: 0;
     padding: 0;
-    outline: 1px solid darkmagenta;
+    /*outline: 1px solid darkmagenta;*/
 }
 
 h2 {
@@ -406,7 +409,7 @@ h2 {
 }
 
 .doings-anno {
-    padding-top: 53px;
+    padding-top: 91px;
 }
 
 .doings-block {
@@ -422,16 +425,17 @@ h2 {
 
 .doings-block a {
     display: block;
-    margin-top: 92px;
+    margin-top: 89px;
     padding: 0;
     font-size: 20px;
-    height: 140px;
+    height: 150px;
+    cursor: pointer;
     color: rgb(137, 147, 173);
     text-align: center;
     text-decoration: none;
     background-repeat: no-repeat;
     background-position: top;
-    outline: 1px solid sandybrown;
+    /*outline: 1px solid sandybrown;*/
 }
 
 .doings-block a:nth-of-type(1) {
@@ -458,22 +462,23 @@ h2 {
     margin: 0;
     padding: 0;
     padding-top: 90px;
+    line-height: 150%;
 }
 
 .pricing-button-position {
     margin: 0 auto;
-    margin-top: 98px;
+    margin-top: 92px;
     padding: 0;
 }
 
 .examples-item {
     margin: 0;
     padding: 0;
-    outline: 1px solid lawngreen;
+    /*outline: 1px solid lawngreen;*/
 }
 
 .examples-item h2 {
-    padding-top: 195px;
+    padding-top: 192px;
 }
 
 .examples-block {
@@ -482,10 +487,10 @@ h2 {
 
 .swiper-container {
     margin: 0;
-    margin-top: 20px;
+    margin-top: 100px;
     padding: 0 28px;
     height: 380px;
-    outline: 1px solid darkorange;
+    /*outline: 1px solid darkorange;*/
 }
 
 .swiper-slide {
@@ -518,7 +523,7 @@ h2 {
 .site-title {
     margin: 0;
     padding: 0;
-    padding-top: 15px;
+    padding-top: 18px;
     font-size: 20px;
     color: rgb(137, 147, 173);
     text-align: center;
@@ -557,14 +562,14 @@ h2 {
 .project-button-position {
     display: block;
     margin: 0 auto;
-    margin-top: 93px;
+    margin-top: 63px;
     padding: 0;
 }
 
 .price-item {
     margin: 0;
     margin-top: 102px;
-    padding: 0 110px 87px 110px;
+    padding: 0 110px 85px 110px;
     background-image: linear-gradient(to bottom left, rgb(255, 47, 150), rgb(255, 143, 90));
     /*outline: 1px solid darkgreen;*/
 }
@@ -572,7 +577,7 @@ h2 {
 .price-bar {
     margin: 0 auto;
     padding: 0;
-    padding-top: 79px;
+    padding-top: 77px;
     width: 944px;
 }
 
@@ -591,6 +596,7 @@ h2 {
     font-size: 18px;
     color: rgb(255, 255, 255);
     text-align: left;
+    line-height: 150%;
 }
 
 .footer-stripe {
@@ -600,7 +606,7 @@ h2 {
     height: 110px;
     display: flex;
     justify-content: space-between;
-    outline: 1px solid rebeccapurple;
+    /*outline: 1px solid rebeccapurple;*/
 }
 
 .left-footer-block {
@@ -859,7 +865,7 @@ h2 {
 
     .swiper-container {
         padding: 0 56px;
-        outline: 1px solid darkorange;
+        /*outline: 1px solid darkorange;*/
     }
 }
 
