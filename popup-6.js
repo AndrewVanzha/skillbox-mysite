@@ -9,7 +9,7 @@ if (windowWidth < 1250 && windowWidth > 981) {
     numPic = 3;
 }
 
-function setLeftEdgePopupMenu() {
+function setLeftEdgePopupMenu() { // управление левым краем всплывающего меню
     windowWidth = $(window).width();
     if (windowWidth <= 1250) {
         var el = $('.left-header-block');
@@ -29,7 +29,7 @@ function setLeftEdgePopupMenu() {
 }
 
 
-function manageHeaderPhoneLine() {
+function manageHeaderPhoneLine() { // управление телефонным блоком в заголовке
     if (windowWidth <= 790) {
         $('.header-phone-line').css({
             'display': 'inline-block'
@@ -53,8 +53,13 @@ function managePersonalImg() {  //  управление картинкой с �
 
 }
 
-function setLeftPaddingForNameLine() { // управление левым блоком в заголовке
-    if (windowWidth > 1250) {
+function setLeftPaddingForNameLine() { // управление левым блоком в персональном разделе
+    if (windowWidth > 1920) {
+        var paddingLeft = (1920 - 1170) / 2;
+        $('.personal-item .column-left').css({
+            'padding-left': paddingLeft
+        });
+    } else if (windowWidth<=1920 && windowWidth>1170) {
         var paddingLeft = (windowWidth - 1170) / 2;
         $('.personal-item .column-left').css({
             'padding-left': paddingLeft
@@ -83,7 +88,11 @@ function manageSwiperPaginationAndButtons() { // управление окном
         }
     }
 }
-
+/*
+function generateSymbols() {
+    $('.pricing-button-position')
+}
+*/
 $(document).ready(function () {
     windowWidth = $(window).width();
     //console.log(windowWidth);
@@ -108,8 +117,8 @@ $(window).resize(function () {
         $('div.popup-box').remove(); // убираю popup-меню на большом экране
     }
 
-    manageSwiperPaginationAndButtons();
     setLeftPaddingForNameLine();
+    manageSwiperPaginationAndButtons();
     setLeftEdgePopupMenu();
     manageHeaderPhoneLine();
     managePersonalImg();
@@ -134,39 +143,3 @@ $(function () {
         }
     });
 });
-
-/*
-$(window).resize(function () {
-    windowWidth = $(window).width();
-    if ($('div').is('.popup-menu') && windowWidth > 865) {
-        $('.popup-menu').css('display', 'none'); // убрать всплывающее меню
-        $('.burger').css('background-image', 'url("img/burger-sign.png")'); // .burger в исходное состояние
-    }
-    if (windowWidth > 865) {
-        $('.additional-input').hide(); // убрать дополнительный input
-    }
-});*/
-/*
-$(function () {
-    $('.burger').click(function () {
-        if ($('.popup-menu').is(':visible')) {
-            $('.burger').css('background-image', 'url("img/burger-sign.png")');
-        } else {
-            $('.burger').css('background-image', 'url("img/cruz-sign.png")');
-            $('.additional-input').hide(); // убираю доп.input
-        }
-        $('.popup-menu').toggle(400);
-    });
-});*/
-/*
-$(function () {
-    $('a.header-logo-small').click(function () { // клик на псевдоэлемент
-        if (!$('.popup-menu').is(':visible')) {
-            $('.additional-input').toggle(300);
-        }
-        //console.log('press');
-        if ($('.additional-input').is(':visible')) {
-            $('.additional-input').css('display', 'block');
-        }
-    });
-});*/
