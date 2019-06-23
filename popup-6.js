@@ -64,11 +64,17 @@ function setLeftPaddingForNameLine() { // управление левым бло
         $('.personal-item .column-left').css({
             'padding-left': paddingLeft
         });
-    } else {
+    } else if (windowWidth<=1170 && windowWidth>1005) { // 1024px
         $('.personal-item .column-left').css({
-            'padding-left': '0'
+            'padding-left': '20px'
+        });
+    } else {
+        var paddingLeft = (windowWidth - 580 - 10) / 2;
+        $('.personal-item .column-left').css({
+            'padding-left': paddingLeft
         });
     }
+    console.log(windowWidth);
 }
 
 function manageSwiperPaginationAndButtons() { // управление окном pagination и кнопками в слайдере
