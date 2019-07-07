@@ -182,7 +182,7 @@ body {
   width: 1230px;
   margin: 0 auto;
   overflow: hidden;
-  outline: 1px solid darkblue;
+  /*outline: 1px solid darkblue;*/
 }
 
 .clearfix::after {
@@ -194,7 +194,7 @@ body {
 
 /* верхняя полоса */
 .header-line {
-  outline: 1px solid darkblue;
+  /*outline: 1px solid darkblue;*/
 }
 
 .popup-box {
@@ -329,7 +329,7 @@ body {
   height: 688px;
   overflow: hidden;
   position: relative;
-  outline: 1px solid sienna;
+  /*outline: 1px solid sienna;*/
 }
 
 .personal-item .column-left {
@@ -338,7 +338,7 @@ body {
   padding: 0;
   /*padding-left: 105px;*/
   width: 580px;
-  outline: 2px dashed darkgoldenrod;
+  /*outline: 2px dashed darkgoldenrod;*/
 }
 
 h1 {
@@ -372,7 +372,7 @@ h1 {
   margin: 0;
   padding: 0;
   width: 807px;
-  outline: 2px dashed darkslateblue;
+  /*outline: 2px dashed darkslateblue;*/
 }
 
 .author-pic {
@@ -397,7 +397,7 @@ h1 {
 .deal-item {
   margin: 0;
   padding: 0;
-  outline: 1px solid darkmagenta;
+  /*outline: 1px solid darkmagenta;*/
 }
 
 h2 {
@@ -642,7 +642,7 @@ h2 {
   height: 42px;
   background-size: 35px 42px;
   position: absolute;
-  background-color: aqua;
+  /*background-color: aqua;*/
 }
 
 .small-2 {
@@ -650,7 +650,7 @@ h2 {
   height: 36px;
   background-size: 53px 36px;
   position: absolute;
-  background-color: aqua;
+  /*background-color: aqua;*/
 }
 
 .small-3 {
@@ -658,7 +658,7 @@ h2 {
   height: 40px;
   background-size: 45px 40px;
   position: absolute;
-  background-color: aqua;
+  /*background-color: aqua;*/
 }
 
 .small-4 {
@@ -666,7 +666,7 @@ h2 {
   height: 26px;
   background-size: 68px 26px;
   position: absolute;
-  background-color: aqua;
+  /*background-color: aqua;*/
 }
 
 .small-5 {
@@ -674,7 +674,7 @@ h2 {
   height: 26px;
   background-size: 68px 26px;
   position: absolute;
-  background-color: aqua;
+  /*background-color: aqua;*/
 }
 
 .red-sign1 {

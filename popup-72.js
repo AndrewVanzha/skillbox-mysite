@@ -87,7 +87,6 @@ function moveSign(class__signString, startWindowWidth, sign_startCoords, endWind
   var paramK;
   var paramC;
   var classString = '';
-  //var classString = '.small-elements ';
 
   classString += class__signString; // формирую строку нужного класса
 
