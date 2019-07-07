@@ -918,7 +918,7 @@ h2 {
     /*justify-content: space-around;*/
     justify-content: space-between;
     /*padding-left: 40px;*/
-    padding-right: 60px;
+    padding-right: 40px;
     width: auto;
   }
 
@@ -992,23 +992,26 @@ h2 {
   }
 
   .doings-block a:nth-of-type(1) {
-    padding: 0 96px;
+    /*padding: 0 96px;*/
     padding: 0 76px;
+    width: 247px;
   }
 
   .doings-block a:nth-of-type(2) {
-    padding: 0 90px;
+    /*padding: 0 90px;*/
     padding: 0 70px;
+    width: 259px;
   }
 
   .doings-block a:nth-of-type(3) {
-    padding: 0 124px;
+    /*padding: 0 124px;*/
     padding: 0 104px;
   }
 
   .doings-block a:nth-of-type(4) {
-    padding: 0 88px;
+    /*padding: 0 88px;*/
     padding: 0 68px;
+    width: 237px;
   }
 
   .pricing-button-position {
@@ -1058,8 +1061,8 @@ h2 {
   }
 
   .footer-container {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
     width: auto;
   }
 
@@ -1108,12 +1111,12 @@ h2 {
 @media (max-width: 1250px) and (min-width: 981px) {
   .author-pic {
     background:
-      url(img/crumpled-ellipse.png) no-repeat 44px 161px / 622px;
+      url(img/crumpled-ellipse.png) no-repeat 44px 161px / 672px;
   }
 
   .author-pic div {
     margin: 0 auto;
-    padding-left: 120px;
+    padding-left: 140px;
     padding-top: 26px;
   }
 
@@ -1122,6 +1125,7 @@ h2 {
   }
 
   .deal-item {
+    margin-left: 35px;
     margin-right: 85px;
   }
 
