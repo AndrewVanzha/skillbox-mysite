@@ -6,60 +6,77 @@ var rs1Y;
 var desktopWidth = 1920 - 13;
 var tabletWidth = 1024 - 13; // 1024
 var telWidth = 320;
-var redSigns_wideWindow = [ // макс=5! начальная позиция для красных для 1920 (координата x, координата y, поворот, прозрачность)
-  [240, 295, 0, 1],
-  [370, 595, 0, 1],
-  [118, 67, 0, 1],
-  [777, 93, 0, 1],
+var redSigns_wideWindow = [ // макс=5! позиция для красных для 1920 (координата x, координата y, поворот, прозрачность)
+  [240, 295, 0.3, 1],
+  [370, 595, -0.4, 1],
+  [118, 67, 0.4, 1],
+  [777, 93, -0.2, 1],
   [955, 472, 0.5, 1],
 ];
-var redSigns_middleWindow = [ // макс=5! начальная позиция для красных для 1024
-  [40, 535, 0, 1],
-  [345, 485, 0, 1],
-  [60, 57, -0.2, 1],
-  [870, 50, 0, 1],
+var redSigns_middleWindow = [ // макс=5! позиция для красных для 1024
+  [45, 535, 0.3, 1],
+  [345, 480, -0.4, 1],
+  [60, 57, 0.4, 1],
+  [865, 40, -0.2, 1],
   [410, 142, 0.5, 1],
 ];
-var redSigns_narrowWindow = [ // макс=5! начальная позиция для красных для 320
-  [35, 135, 0, 1],
-  [185, 5, 0, 1],
-  [38, 55, 0, 1],
-  [130, 45, 0, 0],
-  [260, 35, 0, 1],
+var redSigns_narrowWindow = [ // макс=5! позиция для красных для 320
+  [35, 135, 0.3, 1],
+  [185, 5, -0.4, 1],
+  [38, 55, 0.4, 1],
+  [130, 45, -0.2, 0],
+  [260, 35, 0.5, 1],
 ];
-var whiteSigns_wideWindow = [ // макс=5! начальная позиция для белых для 1920
-  [115, -20, 0, 1],
-  [1564, -212, 0, 1],
-  [10, -217, 0, 1],
-  [1330, 17, 0.15, 1],
-  [1652, -20, -0.25, 1],
+/*var whiteSigns_wideWindow = [ // макс=5! позиция для белых для 1920
+  [236, 260, 0, 1],
+  [1654, 82, 0, 1],
+  [120, 67, 0, 1],
+  [1420, 307, 0.15, 1],
+  [1752, 270, -0.25, 1],
 ];
-var whiteSigns_middleWindow = [ // макс=5! начальная позиция для белых для 1024
-  [640, -65, 0, 0],
-  [828, -70, 0, 1],
-  [95, -340, -0.1, 1],
-  [460, -58, 0, 1],
-  [548, -172, 0, 0],
+var whiteSigns_middleWindow = [ // макс=5! позиция для белых для 1024
+  [640, 45, 0, 0],
+  [860, 290, 0, 1],
+  [130, 20, -0.1, 1],
+  [495, 305, 0, 1],
+  [340, 40, 0, 0],
 ];
-var whiteSigns_narrowWindow = [ // макс=5! начальная позиция для белых для 320
-  [140, -65, 0, 0],
-  [178, -20, 0, 0],
-  [95, -340, -0.1, 0],
-  [60, -58, 0, 0],
-  [248, -172, 0, 0],
+var whiteSigns_narrowWindow = [ // макс=5! позиция для белых для 320
+  [140, 65, 0, 0],
+  [178, 20, 0, 0],
+  [95, 140, 0, 0],
+  [60, 58, 0, 0],
+  [248, 72, 0, 0],
+];*/
+var whiteSigns_wideWindow = [ // макс=5! позиция для белых для 1920
+  [126, -20, 0, 1],
+  [1544, -192, 0, 1],
+  [10, -213, 0, 1],
+  [1310, 27, 0.15, 1],
+  [1642, -10, -0.25, 1],
 ];
-var signsParameters = [ // макс=5! начальная позиция для красных для 1920 (координата x, координата y, поворот, прозрачность)
+var whiteSigns_middleWindow = [ // макс=5! позиция для белых для 1024
+  [530, -235, 0, 0],
+  [825, -70, -0.35, 1],
+  [100, -340, 0.4, 1],
+  [460, -60, 0.4, 1],
+  [230, -240, 0, 0],
+];
+var whiteSigns_narrowWindow = [ // макс=5! позиция для белых для 320
+  [35, 35, 0, 0],
+  [178, 20, 0, 0],
+  [95, 10, 0, 0],
+  [60, 55, 0, 0],
+  [248, 5, 0, 0],
+];
+var signsParameters = [ // макс=5! расчетная позиция для элементов (координата x, координата y, поворот, прозрачность)
   [0, 0, 0, 1],
   [0, 0, 0, 1],
   [0, 0, 0, 1],
   [0, 0, 0, 1],
   [0, 0, 0, 1],
 ];
-/*
-Сделал вариант с адаптивными рассыпанными элементами-тегами:
-- теги - изображения,
-- регулируются координаты X и Y всех тегов в зависимости от ширины экрана (используется transform/translate)
-*/
+
 windowWidth = $(window).width();
 if (windowWidth < 1250 && windowWidth > 981) {
   numPic = 2;
@@ -136,20 +153,15 @@ function setLeftPaddingForNameLine() { // управление левым бло
   //console.log(windowWidth);
 }
 
-// формирование траектории смещения для символов, class__signString:String - класс "красного"/"белого" символа
+// расчет траектории смещения для символов, class__signString:String - класс "красного"/"белого" символа
 // sign_startCoords:Array - начальная позиция, sign_endCoords:Array - конечная позиция
 // startWindowWidth - ширина окна для начальной позиции, endWindowWidth - ширина окна для конечной позиции
-function moveSign(class__signString, startWindowWidth, sign_startCoords, endWindowWidth, sign_endCoords) {
+function calculateCoordsSigns(startWindowWidth, sign_startCoords, endWindowWidth, sign_endCoords) {
   var i = 0;
   var paramK;
   var paramC;
-  var classString = '';
-  //var classString = '.small-elements ';
-
-  classString += class__signString; // формирую строку нужного класса
 
   for (i = 0; i < sign_startCoords.length; i++) {
-    var act__classString = classString + (i + 1); // формирую строку нужного класса
     paramK = (sign_startCoords[i][0] - sign_endCoords[i][0]) / (startWindowWidth - endWindowWidth);
     paramC = sign_startCoords[i][0] - paramK * startWindowWidth;
     var coordX = paramK * windowWidth + paramC;
@@ -165,19 +177,39 @@ function moveSign(class__signString, startWindowWidth, sign_startCoords, endWind
     paramK = (sign_startCoords[i][3] - sign_endCoords[i][3]) / (startWindowWidth - endWindowWidth);
     paramC = sign_startCoords[i][3] - paramK * startWindowWidth;
     var opacityE = paramK * windowWidth + paramC;
-    /*
-        $(act__classString).css({
-          //'transform': 'translate(' + coordX + 'px,' + coordY + 'px)'
-          'transform': 'matrix(1, ' + degS + ', ' + -degS + ', 1, ' + coordX + ',' + coordY + ')',
-          'opacity': opacityE
-        });
-    */
+
+    signsParameters[i][0] = coordX;
+    signsParameters[i][1] = coordY;
+    signsParameters[i][2] = degS;
+    signsParameters[i][3] = opacityE;
+
+  }
+  //console.log(startWindowWidth);
+  //console.log(endWindowWidth);
+}
+
+// формирование траектории смещения для символов, class__signString:String - класс "красного"/"белого" символа - не используется
+// sign_startCoords:Array - начальная позиция, sign_endCoords:Array - конечная позиция
+// startWindowWidth - ширина окна для начальной позиции, endWindowWidth - ширина окна для конечной позиции
+function moveSign(class__signString, startWindowWidth, sign_startCoords, endWindowWidth, sign_endCoords) {
+  var i = 0;
+  var classString = '';
+  //var classString = '.small-elements ';
+
+  classString += class__signString; // формирую строку нужного класса
+  calculateCoordsSigns(startWindowWidth, sign_startCoords, endWindowWidth, sign_endCoords); // расчет конечных параметров позиции тега
+  for (i = 0; i < signsParameters.length; i++) {
+    signsParameters[i][0] = signsParameters[i][0] + 110;
+    signsParameters[i][1] = signsParameters[i][1] + 280;
+  }
+
+  for (i = 0; i < sign_startCoords.length; i++) {
+    var act__classString = classString + (i + 1); // формирую строку нужного класса
+
     $(act__classString).css({
-      //'transform': 'translate(' + coordX + 'px,' + coordY + 'px)'
-      //'transform': 'matrix(1, ' + degS + ', ' + -degS + ', 1, ' + coordX + ',' + coordY + ')',
-      'left': coordX,
-      'top': coordY,
-      'opacity': opacityE
+      'left': signsParameters[i][0],
+      'top': signsParameters[i][1],
+      'opacity': signsParameters[i][3]
     });
 
   }
@@ -185,51 +217,63 @@ function moveSign(class__signString, startWindowWidth, sign_startCoords, endWind
   //console.log(endWindowWidth);
 }
 
-function scatterSigns() {
+function scatterSigns(classString) {
   var i = 0;
-  var coordX = 300;
-  var coordY = 100;
-  var degS = 0;
-  var opacityE = 1;
-  var classString = '.red-tag.small-sign';
   var act__classString = '';
   console.log(windowWidth);
 
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < signsParameters.length; i++) {
     act__classString = classString + (i + 1); // формирую строку нужного класса
-    coordX = coordX + 50 * i;
-    coordY = coordY + 20 * i;
-    console.log(act__classString);
-    console.log(coordX);
-    console.log(coordY);
 
     $(act__classString).css({
-      'transform': 'matrix(1, ' + degS + ', ' + -degS + ', 1, ' + coordX + ',' + coordY + ')',
-      'opacity': opacityE,
+      'transform': 'matrix(1, ' + signsParameters[i][2] + ', ' + -signsParameters[i][2] + ', 1, ' + signsParameters[i][0] + ',' + signsParameters[i][1] + ')',
+      'opacity': signsParameters[i][3],
       'transition': 'transform 2s ease-out'
     });
   }
 
 }
 
+// формирование позиции для символов, class__signString:String - класс "красного"/"белого" символа 
+// sign_startCoords:Array - начальная позиция (широкий экран), sign_endCoords:Array - конечная позиция (узкий экран)
+// startWindowWidth - ширина окна для широкого экрана, endWindowWidth - ширина окна для узкого экрана
+function deploySigns(class__signString, startWindowWidth, sign_startCoords, endWindowWidth, sign_endCoords) {
+  var i = 0;
+  var classString = '.red-tag.small-sign';
+
+  classString += class__signString; // формирую строку нужного класса
+  calculateCoordsSigns(startWindowWidth, sign_startCoords, endWindowWidth, sign_endCoords); // расчет конечных параметров позиции тега
+  scatterSigns(class__signString);
+
+  //console.log(class__signString);
+  //console.log(startWindowWidth);
+  //console.log(endWindowWidth);
+}
+
 function setCoordsForSigns() { // управление символами в персональном и ценовом разделах 
   var i = 0;
 
   if (windowWidth > 1920) {
-    moveSign('.red-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow); // двигаю все 5 красных символов в персональном разделе
-    moveSign('.white-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow); // двигаю все 5 белых символов в ценовом разделе
+    // двигаю все 5 красных символов в персональном разделе
+    deploySigns('.red-tag.small-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow);
+    // двигаю все 5 белых символов в ценовом разделе
+    deploySigns('.white-tag.small-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow);
+    //moveSign('.red-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow); 
+    //moveSign('.white-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow); 
 
   } else if (windowWidth <= 1920 && windowWidth > 1170) {
-    moveSign('.red-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow); // двигаю все 5 красных символов в персональном разделе
-    moveSign('.white-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow); // двигаю все 5 белых символов в ценовом разделе
+    deploySigns('.red-tag.small-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow);
+    deploySigns('.white-tag.small-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow);
 
   } else if (windowWidth <= 1170 && windowWidth > 1005) { // 1024px
-    moveSign('.red-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow); // двигаю все 5 красных символов в персональном разделе
-    moveSign('.white-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow); // двигаю все 5 белых символов в ценовом разделе
+    deploySigns('.red-tag.small-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow);
+    deploySigns('.white-tag.small-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow);
 
   } else {
-    moveSign('.red-sign', desktopWidth, redSigns_wideWindow, telWidth, redSigns_narrowWindow); // двигаю все 5 красных символов в персональном разделе
-    moveSign('.white-sign', desktopWidth, whiteSigns_wideWindow, telWidth, whiteSigns_narrowWindow); // двигаю все 5 белых символов в ценовом разделе
+    deploySigns('.red-tag.small-sign', desktopWidth, redSigns_wideWindow, telWidth, redSigns_narrowWindow);
+    deploySigns('.white-tag.small-sign', desktopWidth, whiteSigns_wideWindow, telWidth, whiteSigns_narrowWindow);
+    //moveSign('.red-sign', desktopWidth, redSigns_wideWindow, telWidth, redSigns_narrowWindow); // двигаю все 5 красных символов в персональном разделе
+    //moveSign('.white-sign', desktopWidth, whiteSigns_wideWindow, telWidth, whiteSigns_narrowWindow); // двигаю все 5 белых символов в ценовом разделе
   }
 
   //console.log(windowWidth);
@@ -265,12 +309,11 @@ $(document).ready(function () {
   }
 
   setLeftPaddingForNameLine();
-  //setCoordsForSigns();
+  setCoordsForSigns();
   manageSwiperPaginationAndButtons();
   setLeftEdgePopupMenu();
   manageHeaderPhoneLine();
   managePersonalImg();
-  scatterSigns();
 });
 
 $(window).resize(function () {
@@ -306,5 +349,3 @@ $(function () {
     }
   });
 });
-
-//setTimeout(scatterSign, 10);

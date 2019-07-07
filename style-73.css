@@ -182,7 +182,7 @@ body {
   width: 1230px;
   margin: 0 auto;
   overflow: hidden;
-  outline: 1px solid darkblue;
+  /*outline: 1px solid darkblue;*/
 }
 
 .clearfix::after {
@@ -194,7 +194,7 @@ body {
 
 /* верхняя полоса */
 .header-line {
-  outline: 1px solid darkblue;
+  /*outline: 1px solid darkblue;*/
 }
 
 .popup-box {
@@ -295,7 +295,6 @@ body {
 .header-phone-button {
   display: inline-block;
   padding: 0;
-  /*cursor: pointer;*/
 }
 
 .header-phone-line {
@@ -323,7 +322,6 @@ body {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  /*justify-content: center;*/
   margin: 0 auto;
   padding: 0;
   width: 1920px;
@@ -331,7 +329,7 @@ body {
   height: 688px;
   overflow: hidden;
   position: relative;
-  outline: 1px solid sienna;
+  /*outline: 1px solid sienna;*/
 }
 
 .personal-item .column-left {
@@ -340,7 +338,7 @@ body {
   padding: 0;
   /*padding-left: 105px;*/
   width: 580px;
-  outline: 2px dashed darkgoldenrod;
+  /*outline: 2px dashed darkgoldenrod;*/
 }
 
 h1 {
@@ -374,8 +372,7 @@ h1 {
   margin: 0;
   padding: 0;
   width: 807px;
-  outline: 2px dashed darkslateblue;
-  /*position: relative;*/
+  /*outline: 2px dashed darkslateblue;*/
 }
 
 .author-pic {
@@ -408,7 +405,7 @@ h1 {
 .deal-item {
   margin: 0;
   padding: 0;
-  outline: 1px solid darkmagenta;
+  /*outline: 1px solid darkmagenta;*/
 }
 
 h2 {
@@ -536,7 +533,6 @@ h2 {
   padding: 0;
   text-decoration: none;
   list-style: none;
-  /*cursor: pointer;*/
 }
 
 .swiper-slide a img {
@@ -633,7 +629,6 @@ h2 {
 }
 
 .price-bar h2 {
-  /*margin: 0;*/
   padding: 0;
   line-height: 130%;
   font-size: 45px;
@@ -649,12 +644,7 @@ h2 {
   text-align: left;
   line-height: 150%;
 }
-/*
-.small-elements div {
-  position: absolute;
-  background-color: aqua;
-}
-*/
+
 .small-1 {
   width: 35px;
   height: 42px;
@@ -697,66 +687,60 @@ h2 {
 
 .red-tag {
   position: absolute;
+  font-size: 32px;
+  font-weight: 900;
+  background: linear-gradient(45deg, #fa0a8e, #f4503b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*background-color: cadetblue;*/
+}
+
+.white-tag {
+  position: absolute;
   font-size: 30px;
   font-weight: 900;
-  color: red;
-  /*width: 68px;*/
-  /*height: 26px;*/
-  /*background-size: 68px 26px;*/
-  background-color: aqua;
+  color: white;
+  /*background-color: cadetblue;*/
 }
 
 .red-sign1 {
-    /*top: 350px;*/
   background-image: url('img/sign-1r.png');
 }
 
 .red-sign2 {
-  /*top: 50px;*/
   background-image: url('img/sign-2r.png');
 }
 
 .red-sign3 {
-  /*top: 120px;*/
   background-image: url('img/sign-3r.png');
 }
 
 .red-sign4 {
-  /*top: -245px;*/
   background-image: url('img/sign-4r.png');
 }
 
 .red-sign5 {
-  /*top: -245px;*/
   background-image: url('img/sign-4r.png');
 }
 
 .white-sign1 {
-  /*top: 10px;*/
   background-image: url('img/sign-1w.png');
 }
 
 .white-sign2 {
-  /*top: -80px;*/
   background-image: url('img/sign-2w.png');
 }
 
 .white-sign3 {
-  /*top: 20px;*/
   background-image: url('img/sign-3w.png');
-  /*transform: rotate(-3deg);*/
 }
 
 .white-sign4 {
-  /*top: -560px;*/
   background-image: url('img/sign-4w.png');
-  /*transform: rotate(10deg);*/
 }
 
 .white-sign5 {
-  /*top: -520px;*/
   background-image: url('img/sign-3w.png');
-  /*transform: rotate(100deg);*/
 }
 
 /* подвал */
@@ -950,7 +934,6 @@ h2 {
 
   .personal-item {
     flex-wrap: wrap;
-    /*justify-content: center;*/
     align-items: center;
     align-items: flex-start;
     /*width: 1170px;*/
@@ -965,8 +948,6 @@ h2 {
   }
 
   .fixed-container-wide {
-    /*margin-left: 0px;
-      margin-right: 60px;*/
     margin-left: 37px;
     margin-right: 37px;
     width: auto;
@@ -993,7 +974,6 @@ h2 {
   }
 
   .info-button-position {
-    /*margin: 45px auto 0 auto;*/
     width: 320px;
     height: 67px;
   }
@@ -1011,7 +991,6 @@ h2 {
   }
 
   .doings-block a:nth-of-type(3) {
-    /*padding: 0 124px;*/
     padding: 0 104px;
   }
 
@@ -1058,7 +1037,6 @@ h2 {
   }
 
   .price-item {
-    /*padding: 0;*/
     padding: 0 35px;
   }
 
@@ -1291,6 +1269,11 @@ h2 {
     background-color: rgb(248, 35, 112);
     color: rgb(255, 255, 255);
   }
+
+  .red-tag,
+  .white-tag {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 590px) {
@@ -1334,5 +1317,9 @@ h2 {
   .author-pic {
     background:
       url(img/crumpled-ellipse-320.png) no-repeat -62px 91px / 524px;
+  }
+
+  .explic-line {
+    white-space: pre-wrap;
   }
 }
