@@ -89,7 +89,7 @@ if (windowWidth < 1250 && windowWidth > 981) {
 function setLeftEdgePopupMenu() { // управление левым краем всплывающего меню
   windowWidth = $(window).width();
   if (windowWidth <= 1250) {
-    var el = $('.left-header-block');
+    var el = $('.header-line__nav');
     var varOffset = el.offset();
     $('.popup-box').css({
       top: varOffset.top + 70,
@@ -107,12 +107,12 @@ function setLeftEdgePopupMenu() { // управление левым краем 
 
 function manageHeaderPhoneLine() { // управление телефонным блоком в заголовке
   if (windowWidth <= 790) {
-    $('.header-phone-line').css({
+    $('.header-line__phonetext').css({
       'display': 'inline-block'
     });
     //console.log(varOffset.left);
   } else {
-    $('.header-phone-line').css({
+    $('.header-line__phonetext').css({
       'display': 'none',
     });
     //console.log(windowWidth);
@@ -122,9 +122,9 @@ function manageHeaderPhoneLine() { // управление телефонным 
 
 function managePersonalImg() { //  управление картинкой с автором
   if (windowWidth <= 980) {
-    $('.author-pic div img').attr('src', 'img/man-320.png');
+    $('.central-container__personal-authorpic div img').attr('src', 'img/man-320.png');
   } else {
-    $('.author-pic div img').attr('src', 'img/man.png');
+    $('.central-container__personal-authorpic div img').attr('src', 'img/man.png');
   }
 
 }
@@ -132,21 +132,21 @@ function managePersonalImg() { //  управление картинкой с а
 function setLeftPaddingForNameLine() { // управление левым блоком в персональном разделе и символами
   if (windowWidth > 1920) {
     var paddingLeft = (1920 - 1170) / 2;
-    $('.personal-item .column-left').css({ // двигаю край левого блока в персональном разделе
+    $('.central-container__personal .central-container__personal-leftcol').css({ // двигаю край левого блока в персональном разделе
       'padding-left': paddingLeft
     });
   } else if (windowWidth <= 1920 && windowWidth > 1170) {
     var paddingLeft = (windowWidth - 1170) / 2 - 150 * 0;
-    $('.personal-item .column-left').css({
+    $('.central-container__personal .central-container__personal-leftcol').css({
       'padding-left': paddingLeft
     });
   } else if (windowWidth <= 1170 && windowWidth > 1005) { // 1024px
-    $('.personal-item .column-left').css({
+    $('.central-container__personal .central-container__personal-leftcol').css({
       'padding-left': '20px'
     });
   } else {
     var paddingLeft = (windowWidth - 580 - 10) / 2;
-    $('.personal-item .column-left').css({
+    $('.central-container__personal .central-container__personal-leftcol').css({
       'padding-left': paddingLeft
     });
   }
@@ -239,7 +239,7 @@ function scatterSigns(classString) {
 // startWindowWidth - ширина окна для широкого экрана, endWindowWidth - ширина окна для узкого экрана
 function deploySigns(class__signString, startWindowWidth, sign_startCoords, endWindowWidth, sign_endCoords) {
   var i = 0;
-  var classString = '.red-tag.small-sign';
+  var classString = '.central-container__redtag.small-sign';
 
   classString += class__signString; // формирую строку нужного класса
   calculateCoordsSigns(startWindowWidth, sign_startCoords, endWindowWidth, sign_endCoords); // расчет конечных параметров позиции тега
@@ -255,23 +255,23 @@ function setCoordsForSigns() { // управление символами в п�
 
   if (windowWidth > 1920) {
     // двигаю все 5 красных символов в персональном разделе
-    deploySigns('.red-tag.small-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow);
+    deploySigns('.central-container__redtag.small-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow);
     // двигаю все 5 белых символов в ценовом разделе
-    deploySigns('.white-tag.small-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow);
+    deploySigns('.central-container__whitetag.small-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow);
     //moveSign('.red-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow); 
     //moveSign('.white-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow); 
 
   } else if (windowWidth <= 1920 && windowWidth > 1170) {
-    deploySigns('.red-tag.small-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow);
-    deploySigns('.white-tag.small-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow);
+    deploySigns('.central-container__redtag.small-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow);
+    deploySigns('.central-container__whitetag.small-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow);
 
   } else if (windowWidth <= 1170 && windowWidth > 1005) { // 1024px
-    deploySigns('.red-tag.small-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow);
-    deploySigns('.white-tag.small-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow);
+    deploySigns('.central-container__redtag.small-sign', desktopWidth, redSigns_wideWindow, tabletWidth, redSigns_middleWindow);
+    deploySigns('.central-container__whitetag.small-sign', desktopWidth, whiteSigns_wideWindow, tabletWidth, whiteSigns_middleWindow);
 
   } else {
-    deploySigns('.red-tag.small-sign', desktopWidth, redSigns_wideWindow, telWidth, redSigns_narrowWindow);
-    deploySigns('.white-tag.small-sign', desktopWidth, whiteSigns_wideWindow, telWidth, whiteSigns_narrowWindow);
+    deploySigns('.central-container__redtag.small-sign', desktopWidth, redSigns_wideWindow, telWidth, redSigns_narrowWindow);
+    deploySigns('.central-container__whitetag.small-sign', desktopWidth, whiteSigns_wideWindow, telWidth, whiteSigns_narrowWindow);
     //moveSign('.red-sign', desktopWidth, redSigns_wideWindow, telWidth, redSigns_narrowWindow); // двигаю все 5 красных символов в персональном разделе
     //moveSign('.white-sign', desktopWidth, whiteSigns_wideWindow, telWidth, whiteSigns_narrowWindow); // двигаю все 5 белых символов в ценовом разделе
   }
@@ -331,14 +331,14 @@ $(window).resize(function () {
 });
 
 $(function () {
-  $('.left-header-block').click(function () {
+  $('.header-line__nav').click(function () {
     windowWidth = $(window).width();
     setLeftEdgePopupMenu();
     //console.log('burger');
     if (windowWidth < 1250 && (!$('div').is('.popup-box'))) {
       $('.header-line').append( // вывожу popup-меню
         '<div class="popup-box">' +
-        '<div class="nav-list">' +
+        '<div class="header-line__nav-list">' +
         '<li><a href="#">Услуги</a></li>' +
         '<li><a href="#">Портфолио</a></li>' +
         '<li><a href="#">Стоимость</a></li>' +
