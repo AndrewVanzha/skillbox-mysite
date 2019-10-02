@@ -1,4 +1,4 @@
-vvar windowWidth;
+var windowWidth;
 var numPic = 3;
 var rs1X;
 var rs1Y;
