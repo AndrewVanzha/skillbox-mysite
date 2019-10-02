@@ -1,4 +1,4 @@
-/*https://google-webfonts-helper.herokuapp.com/fonts*/
+/* https://google-webfonts-helper.herokuapp.com/fonts */
 
 /* roboto-300 - cyrillic-ext_latin_cyrillic */
 @font-face {
@@ -193,10 +193,10 @@ body {
 
 
 /* верхняя полоса */
-.header-line {
-  /*outline: 1px solid darkblue;*/
+/*.header-line {
+  outline: 1px solid darkblue;
 }
-
+*/
 .popup-box {
   position: absolute;
   /*top: 70px;
@@ -690,7 +690,7 @@ h2 {
   font-size: 32px;
   font-weight: 900;
   background: linear-gradient(45deg, #fa0a8e, #f4503b);
-  -webkit-background-clip: text;
+  /*-webkit-background-clip: text;*/
   -webkit-text-fill-color: transparent;
   /*background-color: cadetblue;*/
 }
