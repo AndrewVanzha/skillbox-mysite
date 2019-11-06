@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>JS делегирование</title>
+  <link rel="stylesheet" href="style-del.css">
+  <script src="js-del.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-block">
+      <h1>JavaScript / делегирование</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div id="menu">
+        <button data-action="save">Сохранить</button>
+        <button data-action="load">Загрузить</button>
+        <button data-action="search">Поиск</button>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+      <div class="box box5"></div>
+    </div>
+
+    <div class="block2">
+      <div class="box box21"></div>
+      <div class="box box22"></div>
+      <div class="box box23"></div>
+      <div class="box box24"></div>
+      <div class="box box25"></div>
+    </div>
+
+    <div class="popup__form">
+      <span class="popup__form_close">X</span>
+      <h2>Заказать звонок</h2>
+      <p>Представьтесь, мы Вам перезвоним</p>
+
+      <form action="/" class="popup__form-form ajax-form" method="POST" name="" enctype="multipart/form-data">
+
+        <!--<div class="popup__form_inputblock">-->
+        <div class="popup__formbox popup__formbox-greyborder">
+          <input class="popup__formbox-input popup__formbox-inputneutral name-box" type="text" name="name" required />
+          <label class="popup__formbox-text popup__formbox-textneutral">Ваше имя:*</label>
+        </div>
+
+        <div class="popup__formbox popup__formbox-greyborder">
+          <input class="popup__formbox-input popup__formbox-inputneutral phone_mask" type="phone" name="phone"
+            required />
+          <label class="popup__formbox-text popup__formbox-textneutral">Телефон:*</label>
+        </div>
+
+        <div class="popup__formbox popup__formbox-greyborder">
+          <input class="popup__formbox-input popup__formbox-inputneutral email_mask" type="email" name="email"
+            required />
+          <label class="popup__formbox-text popup__formbox-textneutral">Email:*</label>
+        </div>
+        <!--</div>-->
+
+        <div class="popup__form_bottom">
+          <input id="popup__form_agree" type="checkbox" class="popup__form_check-input" checked="" />
+          <label for="popup__form_agree" class="popup__form_check-label new_check">Я согласен на <span>обработку
+              персональных данных</span></label>
+        </div>
+
+        <!--<p> * - обязательные поля</span></p>-->
+
+        <input class="popup__form_button" type="submit" name="web_form_submit" value="Отправить" />
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <footer>
+  </footer>
+</body>
+
+</html>

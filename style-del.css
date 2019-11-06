@@ -1,0 +1,207 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, serif;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.header-block {
+  margin: 0 auto;
+  padding: 17px 23px;
+  background-color: aquamarine;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  text-align: center;
+}
+
+.container,
+.block,
+.block2 {
+  margin: 15px auto 20px auto;
+  width: 1024px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  outline: 1px solid darkmagenta;
+}
+
+button {
+  margin: 0;
+  padding: 10px 20px;
+  background-color: skyblue;
+  cursor: pointer;
+}
+
+#menu {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.box {
+  display: block;
+  width: 90px;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 12px 5px;
+}
+
+.box1,
+.box21 {
+  background-color: yellowgreen;
+}
+
+.box2,
+.box22 {
+  background-color: silver;
+}
+
+.box3,
+.box23 {
+  background-color: rebeccapurple;
+}
+
+.box4,
+.box24 {
+  background-color: brown;
+}
+
+.box5,
+.box25 {
+  background-color: gold;
+}
+
+.highlight {
+  background-color: black!important;
+}
+
+
+div.popup__form {
+	box-sizing: border-box;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 20px 53px 20px 53px;
+	width: 500px;
+	font: 15px/24px Roboto,Arial,sans-serif;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid darkred;
+}
+span.popup__form_close {
+	display: block;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: rgb(105, 105, 105);
+	cursor: pointer;
+}
+div.popup__form h2 {
+	padding: 0;
+	margin: 10px auto 0 auto;
+	/*text-align: center;*/
+	font-size: 1.866em;
+	font-weight: 500;
+	line-height: 27px;
+	color: #222;
+}
+div.popup__form p {
+	padding: 0;
+	margin: 12px auto 0px auto;
+	font-size: .867em;
+	color: #777;
+}
+
+/*.popup__form_inputblock {
+  margin: 0;
+  margin-top: 33px;
+  padding: 0;
+  outline: 1px solid darkmagenta;
+}*/
+form.popup__form {
+	color: #555;
+	background-color: rgb(255, 255, 255);
+}
+.popup__formbox {
+	position: relative;
+	margin: 33px 0;
+	/*margin-bottom: 33px;*/
+	padding: 0;
+}
+.popup__formbox-solidborder {
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 2px;
+}
+.popup__formbox-greyborder {
+	border: 1px solid rgb(225, 225, 225);
+	border-radius: 2px;
+}
+.popup__formbox-input {
+	width: 99.9%;
+	border: none;
+	outline: none;
+	margin: 0;
+	padding: 15px 0 14px 0;
+	font-size: 14px;
+	line-height: 1.43;
+	transition: .5s ease-out;
+	-webkit-transition: .5s ease-out;
+	-moz-transition: .5s ease-out;
+	-o-transition: .5s ease-out;
+}
+.popup__formbox-inputneutral {
+	background-color: rgb(249, 249, 249);
+}
+.popup__formbox-inputactive {
+	background-color: rgb(255, 255, 255);
+}
+.popup__formbox-text {
+	position: absolute;
+	left: 12px;
+	margin: 0;
+	padding: 0 4px;
+	font-size: 0.933em;
+	transition: .5s ease-out;
+	-webkit-transition: .5s ease-out;
+	-moz-transition: .5s ease-out;
+	-o-transition: .5s ease-out;
+}
+.popup__formbox-textneutral {
+	top: 13px;
+	background-color: rgb(249, 249, 249);
+}
+.popup__formbox-textactive {
+	top: -13px;
+	background-color: rgb(255, 255, 255);
+}
+
+div.popup__form_bottom {
+	padding: 4px 0 21px 0;
+	font-size: 13px;
+	background-color: rgb(255, 255, 255);
+}
+.popup__form_check-label span {
+	color: rgb(68, 153, 255);
+}
+.popup__form_button {
+	margin: 3px 0 0 0;
+	padding: 10px 25px 11px 25px;
+	background-color: #08c;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	font-weight: 700;
+}
+.popup__form_button:hover {
+	background-color: rgb(88, 141, 206);
+}

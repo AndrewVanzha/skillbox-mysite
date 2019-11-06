@@ -1,0 +1,233 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, serif;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+.header-block {
+	margin: 0 auto;
+	padding: 17px 23px;
+	background-color: aquamarine;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 28px;
+	text-align: center;
+}
+
+.container {
+	margin: 15px auto 20px auto;
+	width: 1024px;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	outline: 1px solid darkmagenta;
+}
+
+button#my_call_button {
+	display: block;
+	margin: .5em auto 2em auto;
+	padding: .5em 2em;
+	font-size: 1.3em;
+	font-weight: 500;
+	color: #49f;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+	border: 1px solid #49f;
+	border-radius: 2px;
+}
+
+button#my_call_button:hover {
+	color: #fff;
+	background-color: #49f;
+}
+
+#menu_block {
+	box-sizing: border-box;
+	display: none;
+	/*display: flex;*/
+	align-items: center;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	padding-top: 3em;
+	width: 100%;
+	height: 100%;
+	/*overflow: auto;
+	overflow: hidden;*/
+	background-color: rgba(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+div.popup__form {
+	box-sizing: border-box;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 20px 53px 20px 53px;
+	width: 500px;
+	font: 15px/24px Roboto, Arial, sans-serif;
+	background-color: rgb(255, 255, 255);
+	/*outline: 1px solid darkred;*/
+}
+
+div.popup__form_close {
+	display: block;
+	padding: 0;
+	margin: 0;
+	color: rgb(105, 105, 105);
+	cursor: pointer;
+	float: right;
+	width: 20px;
+	height: 20px;
+	/*border: 1px solid darkviolet;*/
+}
+
+.popup__form_close::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.popup__form_close-intA {
+	margin-left: 10px;
+	height: 20px;
+	width: 1px;
+	background-color: black;
+	transform: rotate(45deg);
+}
+
+.popup__form_close-intB {
+	height: 20px;
+	width: 1px;
+	background-color: black;
+	transform: rotate(90deg);
+}
+
+div.popup__form h2 {
+	padding: 0;
+	margin: 30px auto 0 auto;
+	/*text-align: center;*/
+	font-size: 1.866em;
+	font-weight: 500;
+	line-height: 27px;
+	color: #222;
+}
+
+div.popup__form p {
+	padding: 0;
+	margin: 12px auto 0px auto;
+	font-size: .867em;
+	color: #777;
+}
+
+
+form.popup__form-form {
+	color: #555;
+	background-color: rgb(255, 255, 255);
+}
+
+.popup__formbox {
+	position: relative;
+	margin: 33px 0;
+	/*margin-bottom: 33px;*/
+	padding: 0;
+}
+
+.popup__formbox-solidborder {
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 2px;
+}
+
+.popup__formbox-greyborder {
+	border: 1px solid rgb(225, 225, 225);
+	border-radius: 2px;
+}
+
+.popup__formbox-input {
+	width: 99.9%;
+	border: none;
+	outline: none;
+	margin: 0;
+	padding: 15px 0 14px 0;
+	font-size: 14px;
+	line-height: 1.43;
+	transition: .5s ease-out;
+	-webkit-transition: .5s ease-out;
+	-moz-transition: .5s ease-out;
+	-o-transition: .5s ease-out;
+}
+
+.popup__formbox-inputneutral {
+	background-color: rgb(249, 249, 249);
+}
+
+.popup__formbox-inputactive {
+	background-color: rgb(255, 255, 255);
+}
+
+.popup__formbox-text {
+	position: absolute;
+	left: 12px;
+	margin: 0;
+	padding: 0 4px;
+	font-size: 0.933em;
+	transition: .5s ease-out;
+	-webkit-transition: .5s ease-out;
+	-moz-transition: .5s ease-out;
+	-o-transition: .5s ease-out;
+}
+
+.popup__formbox-textneutral {
+	top: 13px;
+	background-color: rgb(249, 249, 249);
+}
+
+.popup__formbox-textactive {
+	top: -13px;
+	background-color: rgb(255, 255, 255);
+}
+
+div.popup__form_bottom {
+	padding: 4px 0 21px 0;
+	font-size: 13px;
+	background-color: rgb(255, 255, 255);
+}
+
+.popup__form_check-label span {
+	color: rgb(68, 153, 255);
+}
+
+.popup__form_button {
+	margin: 3px 0 25px 0;
+	padding: 10px 25px 11px 25px;
+	background-color: #08c;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	font-weight: 700;
+}
+
+.popup__form_button:hover {
+	background-color: rgb(88, 141, 206);
+}
+
+/*#block1 {
+	height: 5px;
+	width: 50px;
+	background-color: #f0f;
+}
+.test-input {
+	margin-top: 30px;
+	height: 30px;
+}*/
